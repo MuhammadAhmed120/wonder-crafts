@@ -16,7 +16,7 @@ export default function CheckIns() {
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedCheckIn, setSelectedCheckIn] = useState(null); // State to hold selected check-in
 
-    const [checkInsData, loading, error] = useCollectionData(query(collection(firestore, 'checkIns'), orderBy('booked_date', 'asc')));
+    const [checkInsData, loading, error] = useCollectionData(query(collection(firestore, 'checkIns'), orderBy('booked_date', 'desc')));
 
     if (loading) {
         return <CustomLoader />;
