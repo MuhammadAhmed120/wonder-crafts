@@ -32,7 +32,7 @@ const CheckInCard = ({ checkIn, onClick }) => {
                 </Box>
 
                 {/* Title */}
-                <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>{checkIn.title.length > 10 ? `${checkIn.title.slice(0, 9)}...` : checkIn.title|| 'N/A'}</Typography>
+                <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>{checkIn.title.length > 20 ? `${checkIn.title.slice(0, 19)}...` : checkIn.title|| 'N/A'}</Typography>
 
                 {/* Date */}
                 <Typography variant="body2" color="text.secondary" gutterBottom>{checkIn.booked_date || 'N/A'}</Typography>
