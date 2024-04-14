@@ -13,7 +13,10 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig);
 
-const firestore = getFirestore(firebaseApp);
+const firestore = getFirestore(firebaseApp, {
+  experimentalForceLongPolling: true,
+  useFetchStreams: false
+});
 const storage = getStorage(firebaseApp);
 
 export { firestore, storage, ref, uploadBytes, getDownloadURL, collection, doc, addDoc, query, orderBy };
