@@ -1,0 +1,17 @@
+.heroImg {
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width:768px) {
+    .heroImg {
+        height: 290px;
+    }
+    
+    .imgComp{
+        object-fit: cover !important;
+    }
+}
