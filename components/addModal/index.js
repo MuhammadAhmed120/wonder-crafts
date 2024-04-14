@@ -76,8 +76,6 @@ const AddModal = ({ open, onClose }) => {
 
             // Upload the image to Firebase Storage
             const snapshot = await uploadBytes(storageRef, file);
-
-            // Get the download URL of the uploaded image
             const downloadURL = await getDownloadURL(snapshot.ref);
 
             const booking_ID = generateBookingID()

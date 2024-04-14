@@ -28,12 +28,12 @@ export default function CheckIns() {
 
     const handleOpenModal = (checkIn) => {
         console.log("checkIn | ", checkIn);
-        setSelectedCheckIn(checkIn); // Set selected check-in
+        setSelectedCheckIn(checkIn); 
         setModalOpen(true);
     };
 
     const handleCloseModal = () => {
-        setSelectedCheckIn(null); // Clear selected check-in
+        setSelectedCheckIn(null);
         setModalOpen(false);
     };
 
@@ -58,7 +58,7 @@ export default function CheckIns() {
             {/* Cards */}
             <Grid sx={{ padding: 2 }} container spacing={2}>
                 {checkInsData?.map(checkIn => (
-                    <Grid item key={checkIn.id} xs={12} sm={6} md={3}>
+                    <Grid item key={checkIn?.booking_ID} xs={12} sm={6} md={3}>
                         <CheckInCard onClick={handleOpenModal} checkIn={checkIn} />
                     </Grid>
                 ))}

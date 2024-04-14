@@ -11,26 +11,8 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FB_APP_ID,
 };
 
-// Initialize Firebase asynchronously
-// const initializeFirebase = async () => {
-//   if (!firebase.apps.length) {
-//     await firebase.initializeApp(firebaseConfig);
-//   }
-// };
-
-// // Export Firestore and Storage instances asynchronously
-// const initializeFirestoreAndStorage = async () => {
-//   await initializeFirebase();
-//   const firestore = firebase.firestore();
-//   const storage = firebase.storage();
-//   return { firestore, storage };
-// };
-
-// export default initializeFirestoreAndStorage;
-
 const firebaseApp = initializeApp(firebaseConfig);
 
-// Get Firestore and Storage instances
 const firestore = getFirestore(firebaseApp);
 const storage = getStorage(firebaseApp);
 

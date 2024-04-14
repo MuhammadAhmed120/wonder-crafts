@@ -27,13 +27,12 @@ const styles = {
 
 const ViewModal = ({ open, onClose, selectedCheckIn }) => {
     const formatDate = (dateString) => {
-        if (!dateString) return ''; // Return empty string if date string is empty or null
-
-        // Parse the date string using Moment.js
+        if (!dateString) return ''; 
+        
         const date = moment(dateString, 'Do MMM, YYYY', true);
 
         // Check if the date is valid
-        if (!date.isValid()) return ''; // Return empty string if the date is invalid
+        if (!date.isValid()) return '';
 
         // Format the date as a "datetime-local" string
         const formattedDate = date.format('YYYY-MM-DDTHH:mm');

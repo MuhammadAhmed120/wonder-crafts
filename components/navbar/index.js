@@ -61,7 +61,7 @@ export default function Navbar() {
                     </IconButton>
 
                     {/* Avatar */}
-                    <Avatar alt="User Avatar" src="/hero-image.jpg" sx={{ display: { xs: 'none', md: 'inline-flex' } }} />
+                    <Avatar alt="User Avatar" src="/avatar.png" sx={{ display: { xs: 'none', md: 'inline-flex' } }} />
 
                     {/* ExpandMore Icon for small screens */}
                     <IconButton sx={{ color: '#718096', display: { xs: 'inline-flex', md: 'none' } }} onClick={handleMenuClick}>
@@ -82,7 +82,7 @@ export default function Navbar() {
                             vertical: 'top',
                             horizontal: 'right',
                         }}
-                        getContentAnchorEl={null}
+                        getcontentanchorel={null}
                     >
                         {/* Menu Items */}
                         <MenuItem onClick={handleMenuClose}>
@@ -113,7 +113,7 @@ export default function Navbar() {
                         </MenuItem>
                         <MenuItem onClick={handleMenuClose}>
                             {/* Avatar */}
-                            <Avatar alt="User Avatar" src="/hero-image.jpg" />
+                            <Avatar alt="User Avatar" src="/avatar.png" />
                         </MenuItem>
                     </Menu>
                 </Box>

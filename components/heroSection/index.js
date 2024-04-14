@@ -30,13 +30,17 @@ export default function HeroSection() {
         <Box position="relative" sx={{ overflow: 'hidden' }}>
             <AddModal open={modalOpen} onClose={handleCloseModal} />
 
+            {/* IMAGE */}
             <Box position="relative" className={styles.heroImg}>
                 {/* Hero Image */}
                 <Image
                     src="/hero-image.jpg"
                     alt="Hero"
                     fill
+                    priority
                     className={styles.imgComp}
+                    placeholder="blur"
+                    blurDataURL={"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcsuDqNAAGugKxwB4eewAAAABJRU5ErkJggg=="}
                 />
                 {/* Black overlay on the left */}
                 <Box

@@ -32,7 +32,7 @@ const CheckInCard = ({ checkIn, onClick }) => {
                 </Box>
 
                 {/* Title */}
-                <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>{checkIn.title || 'N/A'}</Typography>
+                <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>{checkIn.title.length > 10 ? `${checkIn.title.slice(0, 9)}...` : checkIn.title|| 'N/A'}</Typography>
 
                 {/* Date */}
                 <Typography variant="body2" color="text.secondary" gutterBottom>{checkIn.booked_date || 'N/A'}</Typography>
@@ -40,7 +40,7 @@ const CheckInCard = ({ checkIn, onClick }) => {
                 {/* Avatar */}
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
                     <Avatar alt="Owner" src={`/avatar-${checkIn.id}.jpg`} sx={{ width: 32, height: 32 }} />
-                    <Typography variant="body2" ml={1} sx={{ fontWeight: 'bold' }}>Owner: {checkIn.owner || 'N/A'}</Typography>
+                    <Typography variant="body2" ml={1} sx={{ fontWeight: '700' }}>Owner: {checkIn.owner || 'Ahmed Khan'}</Typography>
                 </Box>
             </CardContent>
         </Card>
